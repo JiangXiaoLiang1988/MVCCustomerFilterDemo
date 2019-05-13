@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome</title>
+</head>
+<body>
+    <h2>Welcome</h2>
+    @{
+        
+        if (Request.IsAuthenticated)
+        { 
+             <text>hello,</text> @User.Identity.Name <span>&nbsp;&nbsp;@Html.ActionLink("注销", "LogOut", "Account")</span>
+        }
+    }
+</body>
+</html>
